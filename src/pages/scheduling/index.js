@@ -1,9 +1,13 @@
-import Header from '../../components/structure/header';
+import Polite from '../../components/scheduling/polite';
+import Information from '../../components/scheduling/information';
+
 import './index.css'
+
 function Scheduling() {
     return (
       <section className="scheduling">
-          <Header></Header>
+          <Information></Information>
+          <Polite></Polite>
       </section>
     );
   }

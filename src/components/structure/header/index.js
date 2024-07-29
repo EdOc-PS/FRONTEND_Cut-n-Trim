@@ -1,11 +1,14 @@
 import './index.css'
-function Header() {
+
+
+export default function Header() {
     return (
       <header className="header">
-        <i class="fa-solid fa-hippo fa-2x"></i>
+        <h2>Cut&Trim</h2>
+        <i class="fi fi-ss-bell"></i>
       </header>
     );
   }
   
-  export default Header;
+
   
