@@ -1,4 +1,4 @@
-.information{
+.months{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -6,7 +6,7 @@
     align-items: center;
     width: 100%;
     padding: .5rem  1rem;
-    height: 30vh;
+    height: 25vh;
     margin-top: 75px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 
-.barber_container{
+.month_container{
     width: 100%;
 }
 .label p{
@@ -25,36 +25,23 @@
     font-size: 14px;
 
 }
-.barber_content{
+.month_content{
     gap: 10px;
     display: flex;
     align-items: center;
-    background-color: #F4F6F8;
-    padding: 1rem;
+    justify-content: space-between;
+    background-color: var(--black);
+    height: 70px;
+    padding: 1rem 1.5rem;
     border-radius: 10px;
-}
 
-.barber_content img{
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
 }
-
-.barber_text_container{
-    font-size: 18px;
+.month_content p, .month_content i{
+    color: #FFF;
     font-weight: 700;
-    height: 100%;
-    display: flex;
-    gap: 5px;
-    align-items: start;
-    flex-direction: column;
 }
+
 
 .barber_text_container p{
     font-family: 'Oswald';
-}
-
-.barber_text_container i{
-    font-size: 14px;
-    color: #FFAF00;
 }

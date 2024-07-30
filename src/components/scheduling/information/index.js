@@ -1,7 +1,7 @@
 import './index.css'
 function Information() {
   return (
-    <section className='test'>
+    <section className='information'>
 
       <div className='user_container'>
         <p>Hello, <strong>Eduardo Octávio</strong></p>
