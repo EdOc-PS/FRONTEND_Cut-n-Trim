@@ -15,7 +15,7 @@ function Information() {
         </div>
 
         <div className='barber_content'>
-          <img src='https://i.pinimg.com/564x/1d/c4/cb/1dc4cbdc7e39a3001820541c853da6b8.jpg' ></img>
+          <img src='https://i.pinimg.com/564x/1d/c4/cb/1dc4cbdc7e39a3001820541c853da6b8.jpg' alt=''/>
           <div className='barber_text_container'>
             <p>Carlos Ricardo Azevedo</p>
             <i class="fi fi-sr-star"></i>
