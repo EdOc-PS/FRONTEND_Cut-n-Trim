@@ -19,25 +19,25 @@ export default function SingUp() {
 
       <form className='form_container'>
         <div class="input_body">
-          <label>Your name:</label>
+          <label>Name:</label>
           <div class="input_container">
-            <i class="fi fi-sr-user-astronaut"></i>
+          <i class="fi fi-sr-employee-man-alt"></i>
             <input type="text" name="" id="" />
           </div>
         </div>
 
         <div class="input_body">
-          <label>Teste</label>
+          <label>Email:</label>
           <div class="input_container">
-            <i class="fi fi-sr-key"></i>
+          <i class="fi fi-sr-envelope"></i>
             <input type="text" name="" id="" />
           </div>
         </div>
 
         <div class="input_body">
-          <label>Teste</label>
+          <label>Password:</label>
           <div class="input_container">
-            <i class="fi fi-sr-mobile-button"></i>
+            <i class="fi fi-sr-shield"></i>
             <input type="text" name="" id="" />
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function SingUp() {
       
 
       <footer className='footer'>
-        <button>Register</button>
+        <button>Continue</button>
         <p>Already have a account? LINK</p>
       </footer>
     </section >
