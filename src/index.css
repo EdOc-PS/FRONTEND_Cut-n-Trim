@@ -31,6 +31,7 @@ i{
 }
 
 a{
+    width: 100%;
     color: var(--black);
     text-decoration: none;
 }

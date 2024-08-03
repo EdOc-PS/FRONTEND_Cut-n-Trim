@@ -7,7 +7,6 @@ section.singup_body,
 .form_container{
     display: flex;
     align-items: center;
-    padding: 1rem;
     flex-direction: column; 
 }
 
@@ -73,16 +72,6 @@ h3{
     gap: 10px;
 }
 
-button{
-    width: 50%;
-    background-color: var(--black);
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: start;
-    padding: 10px;
-    color: #FFF;
-}
-
 
 
 
@@ -102,16 +91,4 @@ button{
     width: 2px;
     height: 50%;
     background-color: var(--azul);
-}
-
-
-footer{
-    padding: 1rem;
-    text-align: start;
-    width: 100%;
-}
-footer p{
-    
-    font-size: 14px;
-    font-family: 'Oswald';
 }

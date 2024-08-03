@@ -1,61 +1,74 @@
-section.createService_body{
+section.createService_body {
     height: 100dvh;
     justify-content: space-between;
+    background-color: var(--azul);
 }
 
-section.createService_body, 
-.form_container{
+section.createService_body,
+.form_container,
+.createService_container {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
-.title_container,
+section.createService_body,
+.header_container,
 .form_container,
-.createService_container{
+.createService_container {
     width: 100%;
 }
 
-h1{
-    font-size: 48px;
-}
-h3{
-    font-size: 38px;
-}
+.header_container {
+    height: 100%;
+    align-items: start;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
 
-.title_container h1, .title_container h3{
-    font-family: 'Oswald';
-    text-transform: uppercase;
-    text-align: start;
+    h1 {
+        font-size: 54px;
+        text-transform: uppercase;
+        text-align: start;
+        color: white;
+
+    }
+
+    p {
+        color: white;
+
+    }
+
+    .back_container {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .btn_back {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    a {
+        width: auto;
+    }
+
+    .btn_back i {
+        font-size: 32px;
+    }
 }
 
 
 .createService_container {
-    display: flex;
-    border-radius: 0px;
-    box-shadow: 0 0 10px #00000027;
-    background-color: #F4F6F8;
+    background-color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 20px 20px 0 0;
+    gap: 30px;
 }
 
-.form_container{
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.input_container {
-    border-radius: 5px;
-    padding: 8px;
-    width: 100%;
-    display: flex;
-    border: 1px solid var(--black);
-    align-items: center;
-    justify-content: space-between;
-    gap: .5rem;
-}
-
-.select-service-time{
+.select-service-time {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -64,6 +77,7 @@ h3{
     background-color: transparent;
     border: none;
 }
+
 .option-time:checked {
     background-color: lightgray;
 }
@@ -72,69 +86,86 @@ h3{
     background-color: lightgray;
 }
 
-.select-service-time:focus{
+.select-service-time:focus {
     outline: none;
     border: none;
     box-shadow: none;
 }
 
-.btn{
+.btn {
     display: flex;
     justify-content: center;
 }
-.input_container i {
-    font-size: 20px;
+
+.form_container {
+    justify-content: center;
+    gap: 10px;
+}
+
+.input_body {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input_container {
+    border-radius: 25px;
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    background-color: #d5ddeca6;
+    border: 1px solid #bdc4d1;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+
+    i {
+        font-size: 20px;
+    }
 }
 
 .input_container input {
     width: 100%;
+    font-size: 16px;
     border: 0;
     background-color: transparent;
-}
-    .input_container input:focus-visible {
+
+    :focus-visible {
         outline: none;
     }
-
-.same-place{
-    display: flex;
-    gap: 10px;
 }
 
-button{
-    width: 50%;
+.input_container select {
+    border-style: none;
+
+    :focus-visible {
+        outline: none;
+    }
+}
+
+.same-place {
+    display: flex;
+    gap: 15px;
+
+    .input_body:first-child {
+        width: 35%;
+    }
+
+    .input_body:last-child {
+        width: 65%;
+    }
+}
+
+.btn_continue {
+    width: 100%;
     background-color: var(--black);
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: start;
-    padding: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 1rem;
     color: #FFF;
 }
-
-.neom {
-    height: 100
-    
-}
-.neom span:first-child{
-    display: block;
-    width: 2px;
-    height: 50%;
-    background-color: var(--vermelho);
-}
-
-.neom span:last-child{
-    display: block;
-    width: 2px;
-    height: 50%;
-    background-color: var(--azul);
-}
-
-footer{
-    padding: 1rem;
-    text-align: start;
+footer {
     width: 100%;
-}
-footer p{
-    
-    font-size: 14px;
-    font-family: 'Oswald';
 }
