@@ -8,8 +8,7 @@ section.singup_body,
     display: flex;
     align-items: center;
     padding: 1rem;
-    flex-direction: column;
- 
+    flex-direction: column; 
 }
 
 .title_container,

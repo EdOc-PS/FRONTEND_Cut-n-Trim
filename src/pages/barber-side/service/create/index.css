@@ -1,0 +1,140 @@
+section.createService_body{
+    height: 100dvh;
+    justify-content: space-between;
+}
+
+section.createService_body, 
+.form_container{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column; 
+}
+
+.title_container,
+.form_container,
+.createService_container{
+    width: 100%;
+}
+
+h1{
+    font-size: 48px;
+}
+h3{
+    font-size: 38px;
+}
+
+.title_container h1, .title_container h3{
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    text-align: start;
+}
+
+
+.createService_container {
+    display: flex;
+    border-radius: 0px;
+    box-shadow: 0 0 10px #00000027;
+    background-color: #F4F6F8;
+}
+
+.form_container{
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.input_container {
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    border: 1px solid var(--black);
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.select-service-time{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.option-time:checked {
+    background-color: lightgray;
+}
+
+.option-time:hover {
+    background-color: lightgray;
+}
+
+.select-service-time:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.input_container i {
+    font-size: 20px;
+}
+
+.input_container input {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+}
+    .input_container input:focus-visible {
+        outline: none;
+    }
+
+.same-place{
+    display: flex;
+    gap: 10px;
+}
+
+button{
+    width: 50%;
+    background-color: var(--black);
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: start;
+    padding: 10px;
+    color: #FFF;
+}
+
+.neom {
+    height: 100
+    
+}
+.neom span:first-child{
+    display: block;
+    width: 2px;
+    height: 50%;
+    background-color: var(--vermelho);
+}
+
+.neom span:last-child{
+    display: block;
+    width: 2px;
+    height: 50%;
+    background-color: var(--azul);
+}
+
+footer{
+    padding: 1rem;
+    text-align: start;
+    width: 100%;
+}
+footer p{
+    
+    font-size: 14px;
+    font-family: 'Oswald';
+}

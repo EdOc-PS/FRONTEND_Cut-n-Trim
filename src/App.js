@@ -34,7 +34,7 @@ function App() {
 
       <Route path='barber'>
         <Route path='account/singup' element ={<SingUp/>} />
-        <Route path='service' element ={<Body/>}>
+        <Route path='service'>
           <Route path='create'element={<CreateService/>}>
         </Route>
       </Route>
