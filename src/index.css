@@ -9,11 +9,11 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Oswald';
-    color: var(--black);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald';
+  color: var(--black);
 }
 
 p, h3, h1{
