@@ -102,7 +102,7 @@ section.registerShop_body,
     font-size: 16px;
     border: 0;
     background-color: transparent;
-    
+
     :focus-visible {
         outline: none;
     }
@@ -121,12 +121,22 @@ section.registerShop_body,
 
 .same-place{
     display: flex;
-    gap:20px;
+    gap: 20px;
 
-    .input_body:first-child{
+    .input_body{
+        width: 50%;
+    }
+}
+
+.same-place:last-child {
+    display: flex;
+    gap: 20px;
+
+    .input_body:first-child {
         width: 70%;
     }
-    .input_body:last-child{
+
+    .input_body:last-child {
         width: 30%;
     }
 }
@@ -137,7 +147,7 @@ footer {
     align-items: center;
     width: 100%;
 
-    p{
+    p {
         font-size: 14px;
     }
 }
