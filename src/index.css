@@ -29,6 +29,7 @@ i{
 
 a{
     color: var(--black);
+    width: 100%;
     text-decoration: none;
 }
 

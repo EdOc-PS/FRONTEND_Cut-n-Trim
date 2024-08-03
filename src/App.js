@@ -2,7 +2,8 @@ import Scheduling from './pages/scheduling';
 import Timetable from './pages/timetable';
 import Header from './components/structure/header';
 import SingUp from './pages/barber-side/account/singup';
-import CreateService from './pages/barber-side/service/create';
+import Login from './pages/barber-side/account/login';
+import BarberShop from './pages/barber-side/account/barber-shop-register';
 
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
@@ -33,13 +34,14 @@ function App() {
       </Route>
 
       <Route path='barber'>
-        <Route path='account/singup' element ={<SingUp/>} />
-        <Route path='service' element ={<Body/>}>
-          <Route path='create'element={<CreateService/>}>
+        <Route path='account' >
+          <Route path='singup' element ={<SingUp/>}/>
+          <Route path='barber-shop' element ={<BarberShop/>}/>
+          <Route path='login' element ={<Login/>}/>
         </Route>
       </Route>
 
-      </Route>
+     
     </Routes>
     </BrowserRouter>
 

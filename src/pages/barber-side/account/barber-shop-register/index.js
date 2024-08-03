@@ -1,26 +1,25 @@
 
-
 import { Link } from 'react-router-dom';
 import './index.css'
 
 
-export default function SingUp() {
+export default function BarberShop() {
   return (
-
-    <section className="singup_body">
+    <section className="registerShop_body">
       <div className='header_container'>
         <div className='back_container'>
-          <Link to={'/barber/account/barber-shop'}>
+          <Link to={'/barber/account/singup'}>
             <button className='btn_back'><i class="fi fi-sr-caret-left"></i></button>
           </Link>
         </div>
         <div className='title_container'>
-          <h1>Register</h1>
-          <p>Enter your personal information</p>
+          <h1>One last more</h1>
+          <p>Enter your barbershop information</p>
         </div>
       </div>
 
-      <div className="singup_container">
+      <div className="registerShop_container">
+
         <form className='form_container'>
           <div class="input_body">
             <label>Name:</label>
@@ -31,35 +30,36 @@ export default function SingUp() {
           </div>
 
           <div class="input_body">
-            <label>Email:</label>
+            <label>City</label>
             <div class="input_container">
-              <i class="fi fi-sr-envelope"></i>
+              <i class="fi fi-sr-europe-flag"></i>
               <input type="text" name="" id="" />
             </div>
           </div>
 
-          <div class="input_body">
-            <label>Password:</label>
-            <div class="input_container">
-              <i class="fi fi-sr-shield"></i>
-              <input type="password" name="" id="" />
-              <i class="fi fi-sr-eye"></i>
+          <div className='same-place'>
+            <div class="input_body">
+              <label>Street</label>
+              <div class="input_container">
+                <i class="fi fi-sr-city"></i>
+                <input type="text" name="" id="" />
+              </div>
+            </div>
+
+            <div class="input_body">
+              <label>Number:</label>
+              <div class="input_container">
+                <i class="fi fi-sr-house-chimney-blank"></i>
+                <input type="text" name="" id="" />
+              </div>
             </div>
           </div>
 
-          <div class="input_body">
-            <label>Repeat password:</label>
-            <div class="input_container">
-              <i class="fi fi-sr-shield"></i>
-              <input type="password" name="" id="" />
-              <i class="fi fi-sr-eye"></i>
-            </div>
-          </div>
 
         </form>
 
         <footer className='footer'>
-          <Link to={'/barber/account/barber-shop'}><button button className='btn_continue'>Continue</button></Link>
+          <Link to={'/barber/account/barber-shop'}><button button className='btn_continue'>Register</button></Link>
           <p>Already have a account? LINK</p>
         </footer>
       </div>
@@ -67,4 +67,6 @@ export default function SingUp() {
   );
 
 }
+
+
 

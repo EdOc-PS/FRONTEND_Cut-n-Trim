@@ -1,13 +1,13 @@
-section.singup_body {
+section.registerShop_body {
     height: 100dvh;
     justify-content: space-between;
-    background-color: var(--vermelho);
+    background-color: var(--azul);
 }
 
 
-section.singup_body,
+section.registerShop_body,
 .form_container,
-.singup_container,
+.registerShop_container,
 .header_container {
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@ section.singup_body,
 
 }
 
-.singup_container {
+.registerShop_container {
     background-color: white;
     padding: 2rem 1.5rem;
     border-radius: 20px 20px 0 0;
@@ -24,7 +24,7 @@ section.singup_body,
 
 .header_container,
 .form_container,
-.singup_container {
+.registerShop_container {
     width: 100%;
 }
 
@@ -34,7 +34,7 @@ section.singup_body,
     justify-content: space-between;
     padding: 2rem 1.5rem;
 
-    & h1 {
+    h1 {
         font-size: 54px;
         text-transform: uppercase;
         text-align: start;
@@ -42,29 +42,29 @@ section.singup_body,
 
     }
 
-    & p {
+    p {
         color: white;
 
     }
 
-    & .back_container {
-      width: 100%;
-      display: flex;
-      justify-content: end;
+    .back_container {
+        width: 100%;
+        display: flex;
+        justify-content: end;
     }
 
-    & .btn_back {
+    .btn_back {
         width: 40px;
         height: 40px;
         background-color: white;
         border-radius: 50%;
     }
 
-    & a {
+    a {
         width: auto;
     }
 
-    & .btn_back i {
+    .btn_back i {
         font-size: 32px;
     }
 }
@@ -91,10 +91,10 @@ section.singup_body,
     align-items: center;
     justify-content: space-between;
     gap: .5rem;
-}
 
-.input_container i {
-    font-size: 20px;
+    i {
+        font-size: 20px;
+    }
 }
 
 .input_container input {
@@ -102,10 +102,10 @@ section.singup_body,
     font-size: 16px;
     border: 0;
     background-color: transparent;
-}
-
-.input_container input:focus-visible {
-    outline: none;
+    
+    :focus-visible {
+        outline: none;
+    }
 }
 
 .btn_continue {
@@ -119,8 +119,16 @@ section.singup_body,
     margin-bottom: 15px;
 }
 
-img {
-    width: 55%;
+.same-place{
+    display: flex;
+    gap:20px;
+
+    .input_body:first-child{
+        width: 70%;
+    }
+    .input_body:last-child{
+        width: 30%;
+    }
 }
 
 footer {
@@ -128,9 +136,8 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
 
-footer p {
-
-    font-size: 14px;
+    p{
+        font-size: 14px;
+    }
 }
