@@ -6,7 +6,6 @@ import { useState } from 'react';
 export default function CreateService() {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
-  const [description, setDescription] = useState('');
   const [durationTime, setDurationTime] = useState('');
   const [isPending, setIsPending] = useState(false);
 
@@ -17,7 +16,6 @@ export default function CreateService() {
       "service": {
           "name": name,
           "price": parseFloat(price),
-          "description": description,
           "duration": parseFloat(durationTime)
       }
     }
