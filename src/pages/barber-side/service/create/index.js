@@ -1,5 +1,5 @@
 
-import './sCreate.css'
+import './createService.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -13,7 +13,7 @@ export default function CreateService() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const service = {
-      "barberShopID": "b1678a77-69c9-4895-a4e6-3a528f6e4297",
+      "barberShopID": "9567e384-a7ef-4bb2-b313-a79db4207d9c",
       "service": {
           "name": name,
           "price": parseFloat(price),
@@ -33,11 +33,6 @@ export default function CreateService() {
     <section className="createService_body">
 
       <div className='header_container'>
-        <div className='back_container'>
-          <Link to={'/barber/account/singup'}>
-            <button className='btn_back'><i class="fi fi-sr-caret-left"></i></button>
-          </Link>
-        </div>
         <div className='title_container'>
           <h1>Create Service</h1>
           <p>Enter your barbershop information</p>

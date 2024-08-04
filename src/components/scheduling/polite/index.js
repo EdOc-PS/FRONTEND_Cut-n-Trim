@@ -1,4 +1,4 @@
-import CardService from '../../general/card-services';
+import CardService from '../../general/card-services/customer';
 import './index.css'
 
 function Polite() {
@@ -11,8 +11,7 @@ function Polite() {
       </div>
 
       <div className='service_container'>
-        <CardService></CardService>
-        <CardService></CardService>
+        <CardService service={{ name: "Cabelo", price: 20 }}></CardService>
       </div>
 
     </section>

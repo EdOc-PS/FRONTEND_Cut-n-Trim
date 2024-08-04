@@ -8,28 +8,47 @@ export default function BarberShop() {
 
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
+  const [state, setState] = useState('');
   const [street, setStreet] = useState('');
   const [number, setNumber] = useState('');
   const [cep, setCep] = useState('');
-  const [neighborhod, setNeighborhod] = useState('');
+  const [neighborhood, setNeighborhood] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const newBarberShop = {
-      "name": name,
-      "city": city,
-      "street": street,
-      "number": number,
-      "openingTime": 9,
-      "closingTime": 18,
-      "lunchTimeStart": 12,
-      "lunchTimeEnd": 13,
-      "cep": cep,
-      "neighborhod": neighborhod
+    
+    var newBarberShop = {
+      barber: {
+        name: sessionStorage.getItem("barberName"),
+        email: sessionStorage.getItem("barberEmail"),
+        password: sessionStorage.getItem("barberPassword"),
+      },
+      barberShop: {
+        name: name,
+        city: city,
+        state: state,
+        street: street,
+        number: number,
+        openingTime: 9,
+        closingTime: 18,
+        lunchTimeStart: 12,
+        lunchTimeEnd: 13,
+        cep: cep,
+        neighborhood: neighborhood
+      }
     }
+    
+    Post('http://localhost:8080/cutandtrim/barber/register-brshp', newBarberShop)
+      .then(jBody => {
+        if(typeof jBody.id !== 'undefined'){
+          window.location.href = 'http://localhost:3000/barber/service/list';
+        }  
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
 
-    Post('localhost:8080/cutandtrim/barber/register', newBarberShop);
+    
   }
 
   return (
@@ -48,7 +67,7 @@ export default function BarberShop() {
 
       <div className="registerShop_container">
 
-        <form className='form_container'>
+        <form className='form_container' onSubmit={handleSubmit}>
           <div class="input_body">
             <label>Name:</label>
             <div class="input_container">
@@ -56,12 +75,20 @@ export default function BarberShop() {
               <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
           </div>
-
-          <div class="input_body">
-            <label>City</label>
-            <div class="input_container">
-              <i class="fi fi-sr-europe-flag"></i>
-              <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+          <div className='same-place'>
+            <div class="input_body">
+              <label>City</label>
+              <div class="input_container">
+                <i class="fi fi-sr-europe-flag"></i>
+                <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+              </div>
+            </div>
+            <div class="input_body">
+              <label>State</label>
+              <div class="input_container">
+                <i class="fi fi-sr-europe-flag"></i>
+                <input type="text" value={state} onChange={(e) => setState(e.target.value)} />
+              </div>
             </div>
           </div>
           
@@ -75,10 +102,10 @@ export default function BarberShop() {
             </div>
 
             <div class="input_body">
-              <label>Neighborhod: </label>
+              <label>Neighborhood: </label>
               <div class="input_container">
                 <i class="fi fi-sr-house-chimney-blank"></i>
-                <input type="text" value={neighborhod} onChange={(e) => setNeighborhod(e.target.value)} />
+                <input type="text" value={neighborhood} onChange={(e) => setNeighborhood(e.target.value)} />
               </div>
             </div>
             
@@ -102,10 +129,11 @@ export default function BarberShop() {
             </div>
             
           </div>
+          <button button className='btn_continue'>Register</button>
         </form>
 
         <footer className='footer'>
-          <Link to={'/barber/account/barber-shop'}><button button className='btn_continue'>Register</button></Link>
+          <Link to={'/barber/account/barber-shop'}></Link>
           <p>Already have a account? LINK</p>
         </footer>
       </div>

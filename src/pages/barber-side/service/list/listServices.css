@@ -1,35 +1,26 @@
-section.registerShop_body {
+section.listServices_body {
     height: 100dvh;
     justify-content: space-between;
     background-color: var(--azul);
 }
 
-
-section.registerShop_body,
+section.createService_body,
 .form_container,
-.registerShop_container,
-.header_container {
+.listServices_container {
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
 
-.registerShop_container {
-    background-color: white;
-    padding: 2rem 1.5rem;
-    border-radius: 20px 20px 0 0;
-    gap: 30px;
-}
-
+section.listServices_body,
 .header_container,
 .form_container,
-.registerShop_container {
+.listServices_container {
     width: 100%;
 }
 
 .header_container {
-    height: 100%;
+    height: 50%;
     align-items: start;
     justify-content: space-between;
     padding: 2rem 1.5rem;
@@ -67,6 +58,46 @@ section.registerShop_body,
     .btn_back i {
         font-size: 32px;
     }
+}
+
+
+.listServices_container {
+    background-color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 20px 20px 0 0;
+    gap: 30px;
+    display: flex;
+    justify-content: start;
+    height: 50%;
+}
+
+.select-service-time {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.option-time:checked {
+    background-color: lightgray;
+}
+
+.option-time:hover {
+    background-color: lightgray;
+}
+
+.select-service-time:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
 }
 
 .form_container {
@@ -108,6 +139,27 @@ section.registerShop_body,
     }
 }
 
+.input_container select {
+    border-style: none;
+
+    :focus-visible {
+        outline: none;
+    }
+}
+
+.same-place {
+    display: flex;
+    gap: 15px;
+
+    .input_body:first-child {
+        width: 35%;
+    }
+
+    .input_body:last-child {
+        width: 65%;
+    }
+}
+
 .btn_continue {
     width: 100%;
     background-color: var(--black);
@@ -116,26 +168,8 @@ section.registerShop_body,
     font-weight: 700;
     padding: 1rem;
     color: #FFF;
-    margin-bottom: 15px;
 }
-
-.same-place{
-    display: flex;
-    gap: 20px;
-
-    .input_body{
-        width: 50%;
-    }
-}
-
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-
-    p {
-        font-size: 14px;
-    }
 }

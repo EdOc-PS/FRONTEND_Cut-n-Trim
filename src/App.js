@@ -5,6 +5,7 @@ import SingUp from './pages/barber-side/account/singup';
 import Login from './pages/barber-side/account/login';
 import BarberShop from './pages/barber-side/account/barber-shop-register';
 import CreateService from './pages/barber-side/service/create';
+import ListServices from './pages/barber-side/service/list';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
 
@@ -41,6 +42,7 @@ function App() {
         </Route>
         <Route path='service' >
           <Route path='create' element ={<CreateService/>}/>
+          <Route path='list' element={<ListServices/>}/>
         </Route>
       </Route>
 

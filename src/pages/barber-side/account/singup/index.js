@@ -18,16 +18,12 @@ export default function SingUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (password === repeatPassword) {
-      const newBarber = {
-        "name": name,
-        "email": email,
-        "password": password,
-      }
-
-      Post('localhost:8080/cutandtrim/barber/register', newBarber);
+      sessionStorage.setItem("barberName", name);
+      sessionStorage.setItem("barberEmail", email);
+      sessionStorage.setItem("barberPassword", password);
+      window.location.href =  "http://localhost:3000/barber/account/barber-shop";
     } else {
-      console.log('bobo');
-
+      console.log('Senhas inválidas!');
     }
   }
 

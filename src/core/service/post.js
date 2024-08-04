@@ -4,6 +4,7 @@ export function Post (url, body){
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(body)
     })
-    .then(jBody => jBody.results)
+    .then(response => response.json()) 
+    .then(jBody => jBody)
     .catch(error => console.log(error))
 }
