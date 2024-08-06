@@ -1,0 +1,94 @@
+section.listServices_body {
+    height: 100dvh;
+    justify-content: space-between;
+    background-color: var(--azul);
+}
+
+section.createService_body,
+.form_container,
+.listServices_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.listServices_body,
+.header_container,
+.form_container,
+.listServices_container {
+    width: 100%;
+}
+
+.header_container {
+    height: 30%;
+    align-items: start;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+
+    h1 {
+        font-size: 54px;
+        text-transform: uppercase;
+        text-align: start;
+        color: white;
+
+    }
+
+    p {
+        color: white;
+
+    }
+
+    .back_container {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .btn_back {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    a {
+        width: auto;
+    }
+
+    .btn_back i {
+        font-size: 32px;
+    }
+}
+
+
+.listServices_container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 20px 20px 0 0;
+    gap: 30px;
+    display: flex;
+    justify-content: start;
+    height: 70%;
+}
+
+
+
+
+
+.input_container select {
+    border-style: none;
+
+    :focus-visible {
+        outline: none;
+    }
+}
+.listServices_button{
+    width: 100%;
+
+}
+.listServices_button button{
+    padding: 1rem 1.25rem;
+    background-color: var(--black);
+    color: white;
+    border-radius: 25px;
+}
