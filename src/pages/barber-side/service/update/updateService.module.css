@@ -1,21 +1,21 @@
-section.createService_body {
+section.updateService_body {
     height: 100dvh;
     justify-content: space-between;
     background-color: var(--azul);
 }
 
-section.createService_body,
+section.updateService_body,
 .form_container,
-.createService_container {
+.updateService_container {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-section.createService_body,
+section.updateService_body,
 .header_container,
 .form_container,
-.createService_container {
+.updateService_container {
     width: 100%;
 }
 
@@ -60,17 +60,8 @@ section.createService_body,
     }
 }
 
-.btn_continue {
-    width: 100%;
-    background-color: var(--black);
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 1rem;
-    color: #FFF;
-}
 
-.createService_container {
+.updateService_container {
     background-color: white;
     padding: 2rem 1.5rem;
     border-radius: 20px 20px 0 0;

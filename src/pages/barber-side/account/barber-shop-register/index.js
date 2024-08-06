@@ -40,7 +40,8 @@ export default function BarberShop() {
 
     Post('http://localhost:8080/cutandtrim/barber/register-brshp', newBarberShop)
       .then(jBody => {
-        if (typeof jBody.id !== 'undefined') {
+        if (typeof jBody.barberShop.id !== 'undefined') {
+          localStorage.setItem('barberShopID',jBody.barberShop.id);
           window.location.href = 'http://localhost:3000/barber/service/list';
         }
       })

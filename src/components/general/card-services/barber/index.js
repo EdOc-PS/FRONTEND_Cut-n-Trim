@@ -14,7 +14,9 @@ export default function CardService(props) {
         </div>
         <div className='action_buttons'>
           <button className='btn-delete' onClick={() => deleteService(props.service.id)}>Deletar</button>
-          <button className='btn-edit'>Editar</button>
+          <Link to={'../../../../barber/service/update/'+ props.service.id}>
+              <button className='btn-edit'>Editar</button>
+          </Link>
         </div>
       </div>
       </div>
@@ -23,7 +25,7 @@ export default function CardService(props) {
 
 function deleteService(service_id){
   Delete('http://localhost:8080/cutandtrim/service/delete', {
-    'barberShopID': 'a7ba22ee-6d40-4b0b-ac16-9496afcab296',
+    'barberShopID': localStorage.getItem('barberShopID'),
     'serviceID': service_id
   }).then(jBody => { 
     window.location.reload();

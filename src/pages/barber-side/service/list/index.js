@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CardService from '../../../../components/general/card-services/barber/index.js';
 import { Get } from '../../../../core/service/get.js';
 import styles from './listServices.module.css';
@@ -9,7 +10,7 @@ export default function ListServices() {
 
   useEffect(() => {
     const getServices = async () => {
-      Get('http://localhost:8080/cutandtrim/barbershop/a7ba22ee-6d40-4b0b-ac16-9496afcab296')
+      Get('http://localhost:8080/cutandtrim/barbershop/'+ localStorage.getItem('barberShopID'))
         .then(jBody => {
           if (jBody.services !== null)
             setServices(jBody.services);
@@ -21,7 +22,7 @@ export default function ListServices() {
 
     getServices();
   }, []);
-  console.log(services)
+
   return (
     <section className={styles.listServices_body}>
       <div className={styles.header_container}>
@@ -32,11 +33,14 @@ export default function ListServices() {
       </div>
 
       <div className={styles.listServices_container}>
+        <Link to='../create/' className={styles.btn_continue}>Create a Service</Link>
         {
-          services.map(service =>
-            <CardService service={{ id: service.id, name: service.name, price: service.price }}></CardService>
-          )}
-
+            services && services.length > 0 ?(
+            services.map( (service) =>
+              <CardService service={{ id: service.id, name: service.name, price: service.price }}></CardService>
+            )    
+          ): (<p>You don't have services registered yet</p>)
+        }
       </div>
 
     </section>

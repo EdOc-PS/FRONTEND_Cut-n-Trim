@@ -20,7 +20,7 @@ export default function SingUp() {
       sessionStorage.setItem("barberName", name);
       sessionStorage.setItem("barberEmail", email);
       sessionStorage.setItem("barberPassword", password);
-      window.location.href = "http://localhost:3000/barber/account/barber-shop";
+      window.location.href = "http://localhost:3000/barber/barber-shop";
     } else {
       console.log('Senhas inválidas!');
     }

@@ -1,42 +1,44 @@
-
-import styles from'./createService.module.css'
-import { Post } from '../../../../core/service/post.js';
+import styles from'./updateService.module.css'
+import { Get } from '../../../../core/service/get.js';
+import { Put } from '../../../../core/service/put.js';
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-export default function CreateService() {
+export default function UpdateService() {
+  const { id } = useParams();
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [durationTime, setDurationTime] = useState('');
-  const [isPending, setIsPending] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) =>{ 
     e.preventDefault();
-    
-    const service = {
-      "barberShopID": localStorage.getItem('barberShopID'),
-      "service": {
-          "name": name,
-          "price": parseFloat(price),
-          "duration": parseFloat(durationTime)
-      }
+
+    const updateService = {
+      id: id,
+      name: name,
+      price: parseFloat(price),
+      duration: parseFloat(durationTime),
+      status: 'A'
     }
-    
-    Post('http://localhost:8080/cutandtrim/barbershop/add-service', service)
-    .then( () => window.location.href = 'http://localhost:3000/barber/service/list')
-    .catch(error => {console.log(error)})
-  }
+
+    Put('http://localhost:8080/cutandtrim/service/update', updateService)
+    .then(() => { 
+      window.location.href = 'http://localhost:3000/barber/service/list';
+    })
+    .catch(error => {console.error('Error:', error);});
+   }
 
   return (
-    <section className={styles.createService_body}>
+    <section className={styles.updateService_body}>
 
       <div className={styles.header_container}>
         <div className={styles.title_container}>
-          <h1>Create Service</h1>
+          <h1>Update Service</h1>
           <p>Enter your barbershop information</p>
         </div>
       </div>
 
-      <div className={styles.createService_container}>
+      <div className={styles.updateService_container}>
         <form className={styles.form_container} onSubmit={ handleSubmit }>
           <div className={styles.input_body}>
             <label>Name:</label>
@@ -72,12 +74,11 @@ export default function CreateService() {
             </div>
           </div>
           <footer className={styles.footer}>
-            <button className={styles.btn_continue}>Create</button>
+            <button className={styles.btn_continue}>Update</button>
           </footer>
         </form> 
       </div>
     </section >
-
   );
 }
 
