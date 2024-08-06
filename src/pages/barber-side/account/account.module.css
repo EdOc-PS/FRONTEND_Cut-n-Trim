@@ -1,0 +1,46 @@
+section.account_body {
+    overflow: hidden;
+    padding: 2rem 1rem;
+    height: 100dvh;
+    justify-content: space-between;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 115%;
+}
+
+.account_container {
+    width: 100%;
+}
+
+.buttons_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    button {
+        width: 100%;
+        padding: 1.25rem;
+        border-radius: 25px;
+    
+        font-size: 18px;
+    }
+
+}
+
+.btn_account {
+    background-color: #4F4A45;
+    color: #F6F1EE;
+
+
+}
+
+.btn_login_account {
+    background-color: transparent;
+    border: 2px solid #ED7D31;
+    color: #ED7D31;
+}
