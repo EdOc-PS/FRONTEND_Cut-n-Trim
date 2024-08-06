@@ -2,9 +2,8 @@
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Post } from '../../../../core/service/post.js';
 
-import './index.css'
+import styles from './singup.module.css'
 
 
 export default function SingUp() {
@@ -21,7 +20,7 @@ export default function SingUp() {
       sessionStorage.setItem("barberName", name);
       sessionStorage.setItem("barberEmail", email);
       sessionStorage.setItem("barberPassword", password);
-      window.location.href =  "http://localhost:3000/barber/account/barber-shop";
+      window.location.href = "http://localhost:3000/barber/account/barber-shop";
     } else {
       console.log('Senhas inválidas!');
     }
@@ -29,65 +28,64 @@ export default function SingUp() {
 
 
   return (
-    <section className="singup_body">
-      <div className='header_container'>
-        <div className='back_container'>
+    <section className={styles.singup_body}>
+      <div className={styles.header_container}>
+        <div className={styles.back_container}>
           <Link to={'/barber/account/barber-shop'}>
-            <button className='btn_back'><i class="fi fi-sr-caret-left"></i></button>
+            <button className={styles.btn_back}><i className="fi fi-sr-caret-left"></i></button>
           </Link>
         </div>
-        <div className='title_container'>
+        <div className={styles.title_container}>
           <h1>Register</h1>
           <p>Enter your personal information</p>
         </div>
       </div>
 
-      <div className="singup_container">
+      <div className={styles.singup_container}>
+        <form className={styles.form_container} onSubmit={handleSubmit}>
+          <div className={styles.input_field}>
+            <div className={styles.input_body}>
+              <label>Name:</label>
+              <div className={styles.input_container}>
+                <i className="fi fi-sr-employee-man-alt"></i>
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+              </div>
+            </div>
 
-        <form className='form_container' onSubmit={handleSubmit}>
-          <div class="input_body">
-            <label>Name:</label>
-            <div class="input_container">
-              <i class="fi fi-sr-employee-man-alt"></i>
-              <input type="text" name="" value={name} onChange={(e) => setName(e.target.value)} />
+            <div className={styles.input_body}>
+              <label>Email:</label>
+              <div className={styles.input_container}>
+                <i className="fi fi-sr-envelope"></i>
+                <input type="email" value={email} onChange={(e) => setEmai(e.target.value)} />
+              </div>
+            </div>
+
+            <div className={styles.input_body}>
+              <label>Password:</label>
+              <div className={styles.input_container}>
+                <i className="fi fi-sr-shield"></i>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <i className="fi fi-sr-eye"></i>
+              </div>
+            </div>
+
+            <div className={styles.input_body}>
+              <label>Repeat password:</label>
+              <div className={styles.input_container}>
+                <i className="fi fi-sr-shield"></i>
+                <input type="password" value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)} />
+                <i className="fi fi-sr-eye"></i>
+              </div>
             </div>
           </div>
 
-          <div class="input_body">
-            <label>Email:</label>
-            <div class="input_container">
-              <i class="fi fi-sr-envelope"></i>
-              <input type="email" name="" value={email} onChange={(e) => setEmai(e.target.value)} />
-            </div>
-          </div>
-
-          <div class="input_body">
-            <label>Password:</label>
-            <div class="input_container">
-              <i class="fi fi-sr-shield"></i>
-              <input type="password" name="" value={password} onChange={(e) => setPassword(e.target.value)} />
-              <i class="fi fi-sr-eye"></i>
-            </div>
-          </div>
-
-          <div class="input_body">
-            <label>Repeat password:</label>
-            <div class="input_container">
-              <i class="fi fi-sr-shield"></i>
-              <input type="password" name="" value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)} />
-              <i class="fi fi-sr-eye"></i>
-            </div>
-          </div>
-
-
-          <footer className='footer'>
-            <button button className='btn_continue'>Continue</button>
+          <footer className={styles.footer}>
+            <button className={styles.btn_continue}>Continue</button>
             <p>Already have a account? LINK</p>
           </footer>
         </form>
-
-
       </div>
+
     </section >
   );
 
